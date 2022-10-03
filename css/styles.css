@@ -12,9 +12,17 @@
     --main-backggound-shadow: rgba(47, 48, 58, 0.4);
     --porfolio-card-overlay: rgba(33, 150, 243, 0.9);
 
+    /* BORDERS */
+    --border-modal-form: 1px solid rgba(33, 33, 33, 0.2);
+    --border-footer-form: border: 1px solid rgba(255, 255, 255, 0.3);
+
+    /* ANIMATION */
     --transition-timing: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    --btn-transform: scale(1.1)
   }
   
+    /* ГЛОБАЛЬНІ СТИЛІ ТА СКИДАННЯ */
+
   body {
     background-color: var(--main-color);
     font-family: 'Roboto', sans-serif;
@@ -59,15 +67,13 @@
     height: auto;
   }
   
-  address {
-    font-style: normal;
-  }
-  
   button {
     border: none;
     cursor: pointer;
   }
   
+    /* СТИЛІ ЗАГАЛЬНОГО КОРИСТУВАННЯ */
+
   .container {
     width: 1200px;
     padding: 0 15px;
@@ -91,6 +97,8 @@
     clip: rect(0 0 0 0);
     overflow: hidden;
   }
+
+      /* ХЕДЕР */
   
   header {
     font-weight: 500;
@@ -209,6 +217,8 @@
   .link-nav:visited:focus {
     color: var(--blue-color);
   }
+
+      /* СЕКЦІЯ З ГАСЛОМ І КНОПКОЮ ЗАМОВЛЕННЯ*/
   
   .motto-order-section {
     text-align: center;
@@ -271,8 +281,9 @@
   .order-service:focus {
     color: var(--blue-color);
     background-color: var(--main-color); 
-    transform: scale(1.2);   
+    transform: var(--btn-transform);   
   }
+    /* МОДАЛЬНЕ ВІКНО */
 
   .backdrop.is-hidden {
     visibility: hidden;
@@ -350,6 +361,8 @@
     fill: currentColor;
     min-width: 18px;
   }
+  
+    /* СТИЛІ ФОРМИ */
 
   .form-group {
     display: flex;
@@ -500,14 +513,13 @@
   .btn-submit:focus {
     background-color: var(--blue-color);
     color: var(--main-color);
-    transform: scale(1.2);
+    transform: var(--btn-transform);
   }
 
+  /* ----------------
+      ПЕРЕВАГИ
+  ----------------*/
 
-  /* 
-  
-  
-  */
   .feature-name {
     font-size: 14px;
     font-weight: 700;
@@ -546,6 +558,10 @@
     line-height: 1.2;
     margin-bottom: 50px;
   }
+
+  /* --------------------
+  ЧИМ МИ ЗАЙМАЄМОСЬ 
+  ---------------------*/
   
   .what-we-do-section {
     padding-top: 0;
@@ -579,13 +595,17 @@
     display: flex;
     gap: 30px;
   }
+
+   /* --------------------
+    НАША КОМАНДА  
+    ---------------------*/
   
   .team-card {
     text-align: center;
     background-color: var(--main-color);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
       0px 2px 1px rgba(0, 0, 0, 0.2);
-    border-radius: 0px 0px 4px 4px;
+    border-radius: 4px;
     transition: var(--transition-timing);
   }
   
@@ -653,6 +673,10 @@
   .icon-item {
     fill: currentColor;
   }
+
+ /* --------------------
+    НАШІ ПАРТНЕРИ
+---------------------*/
   
   .partner {
     display: flex;
@@ -675,109 +699,17 @@
   .partner-link:focus {
     color: var(--blue-color);
     border-color: var(--blue-color);
-    transform: scale(1.1);
+    transform: var(--btn-transform);
   }
   
   .partner-icon {
     fill: currentColor;
   }
-  
-  .filter-list {
-    display: flex;
-    justify-content: center;
-    gap: 8px;
-    padding-bottom: 0;
-  }
-  
-  .filter {
-    cursor: pointer;
-    background-color: var(--button-background);
-    color: var(--main-text-color);
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.625;
-    letter-spacing: 0.03em;
-    border: 0px;
-    border-radius: 4px;
-    font-family: 'Roboto', sans-serif;
-    padding: 6px 22px;
-    transition: color var(--transition-timing), background-color var(--transition-timing), box-shadow var(--transition-timing);
-  }
-  
-  .filter:hover,
-  .filter:focus {
-    border: none;
-    border-radius: 4px;
-    background-color: var(--blue-color);
-    color: var(--main-color);
-    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-  }
-  
-  .projects {
-    margin-top: 50px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    padding-top: 0;
-  }
-  
-  .project-link {
-    display: block;
-    transition: box-shadow var(--transition-timing);
-  }
-  
-  .project-link:hover,
-  .project-link:focus {
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-  }
 
-  .project-overlay {
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .project-link:hover .overlay-project-link,
-  .project-link:focus .overlay-project-link {
-    transform: translatey(-100%);
-  }
-  
-  .overlay-project-link {
-    position: absolute;
-    transform: translatey(0);
-    width: 100%;
-    height: 294px;
-    padding: 63px 24px;
-    background-color: var(--porfolio-card-overlay);
-    transition: transform var(--transition-timing);
-  }
-  
-  .overlay-info {
-    color: var(--main-color);
-    font-size: 18px;
-    line-height: 1.55;
-  }
-  
-  .project-info {
-    border-left: 1px solid var(--border-project-card);
-    border-right: 1px solid var(--border-project-card);
-    border-bottom: 1px solid var(--border-project-card);
-    padding: 20px 24px;
-  }
-  
-  .project-name {
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 2;
-    letter-spacing: 0.06em;
-    margin-bottom: 4px;
-  }
-  
-  .project-type {
-    font-size: 16px;
-    color: var(--text-gray-color);
-    line-height: 1.875;
-  }
-  
+  /*--------------
+     ФУТЕР 
+  --------------*/
+
   footer {
     padding-top: 60px;
     padding-bottom: 60px;
@@ -874,8 +806,11 @@
     padding: 15px 16px;
     margin-right: 12px;
     font-size: 16px;
+    line-height: 1.25;
     color: var(--main-color);
   }
+
+  .footer-mail-subscribe__input
 
   .footer-mail-subscribe__input:required:invalid {
     border-color: red;
@@ -901,3 +836,110 @@
   .footer-mail-subscribe__btn:focus {
     transform: scale(1.07);
   }
+
+          /*-------------- ПОРТФОЛІО---------------- */
+  
+   /* --------------------
+      ФІЛЬТРИ
+  ---------------------*/
+
+  .filter-list {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    padding-bottom: 0;
+  }
+  
+  .filter {
+    cursor: pointer;
+    background-color: var(--button-background);
+    color: var(--main-text-color);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.625;
+    letter-spacing: 0.03em;
+    border: 0px;
+    border-radius: 4px;
+    font-family: 'Roboto', sans-serif;
+    padding: 6px 22px;
+    transition: color var(--transition-timing), background-color var(--transition-timing), box-shadow var(--transition-timing);
+  }
+  
+  .filter:hover,
+  .filter:focus {
+    border: none;
+    border-radius: 4px;
+    background-color: var(--blue-color);
+    color: var(--main-color);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+  }
+
+  /*----------
+   ПРОЄКТИ 
+  ------------*/
+  
+  .projects {
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding-top: 0;
+  }
+  
+  .project-link {
+    display: block;
+    transition: box-shadow var(--transition-timing);
+  }
+  
+  .project-link:hover,
+  .project-link:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+
+  .project-overlay {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .project-link:hover .overlay-project-link,
+  .project-link:focus .overlay-project-link {
+    transform: translatey(-100%);
+  }
+  
+  .overlay-project-link {
+    position: absolute;
+    transform: translatey(0);
+    width: 100%;
+    height: 294px;
+    padding: 63px 24px;
+    background-color: var(--porfolio-card-overlay);
+    transition: transform var(--transition-timing);
+  }
+  
+  .overlay-info {
+    color: var(--main-color);
+    font-size: 18px;
+    line-height: 1.55;
+  }
+  
+  .project-info {
+    border-left: 1px solid var(--border-project-card);
+    border-right: 1px solid var(--border-project-card);
+    border-bottom: 1px solid var(--border-project-card);
+    padding: 20px 24px;
+  }
+  
+  .project-name {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+    margin-bottom: 4px;
+  }
+  
+  .project-type {
+    font-size: 16px;
+    color: var(--text-gray-color);
+    line-height: 1.875;
+  }
+  
