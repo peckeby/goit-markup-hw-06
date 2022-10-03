@@ -51,6 +51,7 @@
   .link {
     text-decoration: none;
     color: currentColor;
+    outline: transparent;
   }
   
   .icon-link {
@@ -58,6 +59,11 @@
     color: currentColor;
   }
   
+  .input,
+  .icon-link {
+    outline: transparent;
+  }
+
   h1,
   li,
   p,
@@ -411,7 +417,7 @@
 
   .form-input {
     padding: 12px 12px 12px 40px;
-    border: var(--border-modal-form)
+    border: var(--border-modal-form);
     border-radius: 4px;
     height: 40px;
     width: 100%;
@@ -419,7 +425,6 @@
     color: var(--main-text-color);
     cursor: pointer;
     transition: border-color var(--transition-timing);
-    outline: transparent;
   }
 
   .form-input-area:focus-within {
@@ -675,6 +680,7 @@
     background-color: var(--main-color);
     color: var(--icons-color);
     transition: color var(--transition-timing), background-color var(--transition-timing);
+    outline: none;
   }
   
   .link-media:hover,
